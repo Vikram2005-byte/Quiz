@@ -1,52 +1,26 @@
-Quiz App
+# Quiz App
 
-A simple and responsive Quiz Application built using HTML, CSS, and JavaScript.
-It displays multiple-choice questions, lets users select answers, shows scores, and provides feedback at the end.
+A responsive multiple-choice quiz built with HTML, CSS, and vanilla JavaScript.
 
-✨ Features
+## Features
+- Four sample multiple-choice questions
+- A 60-second timer for each question
+- Immediate answer feedback
+- Score tracking
+- Next-question flow and restart button
+- Disables answer options after an answer or timeout
 
-Interactive quiz with multiple-choice questions.
+## Run locally
+1. Clone this repository: **git clone https://github.com/Vikram2005-byte/Quiz.git**
+2. Open the repository folder.
+3. Open **index.html** in a modern browser.
 
-Real-time score calculation.
+You can also run **python -m http.server 8000** in the project folder and visit **http://localhost:8000**.
 
-Responsive design for desktop and mobile.
+## Project files
+- **index.html** — quiz interface
+- **styles.css** — styling
+- **script.js** — question data, timer, scoring, and quiz flow
 
-Option to restart the quiz after completion.
-
-🛠️ Tech Stack
-
-HTML – Structure and content.
-
-CSS – Styling and layout.
-
-JavaScript – Quiz logic and dynamic interaction.
-
-📂 Project Structure
-quiz-app/
-├── index.html       # Main HTML page
-├── style.css        # Stylesheet
-└── script.js        # JavaScript logic
-
-🚀 Getting Started
-
-Clone or Download this repository:
-
-git clone https://github.com/yourusername/quiz-app.git
-
-
-Open the index.html file in any modern web browser.
-
-
-🧩 How It Works
-
-Questions and answers are stored in a JavaScript array or fetched from an API.
-
-User selects an answer; the app validates it and moves to the next question.
-
-After all questions are answered, the final score is displayed.
-
-🧑‍💻 Customization
-
-Update script.js to add or modify quiz questions.
-
-Edit style.css to change colors, fonts, or layout.
+## Customize
+Edit the questions array near the top of **script.js** to change the sample questions and answer choices.
