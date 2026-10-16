@@ -34,6 +34,7 @@ function startQuiz() {
 
     scoreEl.textContent = String(score);
     timerEl.textContent = String(timeLeft);
+    document.getElementById("timer").classList.remove("time-low");
     feedbackEl.textContent = "";
     feedbackEl.className = "feedback";
     quizContent.hidden = false;
