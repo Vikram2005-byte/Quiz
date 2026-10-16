@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Quiz App</title>
+    <meta name="description" content="A short general-knowledge quiz with a 60-second timer for each question.">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Quiz App — Quick general knowledge</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Quiz App</h1>
-        <div id="quiz-container">
-            <div id="question-container">
-                <h2 id="question">Question goes here</h2>
-                <div id="options">
-                    <button class="option" data-index="0">Option A</button>
-                    <button class="option" data-index="1">Option B</button>
-                    <button class="option" data-index="2">Option C</button>
-                    <button class="option" data-index="3">Option D</button>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">A quick brain break</p>
+            <h1>Quiz time</h1>
+            <p class="intro">Four general-knowledge questions. Take your time, but keep an eye on the clock.</p>
+        </header>
+
+        <section id="quiz-container" class="quiz-card" aria-label="General knowledge quiz">
+            <div id="quiz-content">
+                <section id="question-container" aria-labelledby="question" aria-live="polite">
+                    <p id="question-progress" class="question-progress">Question 1 of 4</p>
+                    <h2 id="question">Question goes here</h2>
+                    <div id="options" class="options" role="group" aria-label="Answer choices">
+                        <button type="button" class="option" data-index="0">Option A</button>
+                        <button type="button" class="option" data-index="1">Option B</button>
+                        <button type="button" class="option" data-index="2">Option C</button>
+                        <button type="button" class="option" data-index="3">Option D</button>
+                    </div>
+                </section>
+
+                <div class="quiz-meta">
+                    <p id="timer">Time left <strong><span id="time-left">60</span>s</strong></p>
+                    <p id="score">Score <strong><span id="current-score">0</span></strong></p>
                 </div>
+
+                <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+                <button type="button" id="next-btn" class="button button-primary" disabled>Next question</button>
             </div>
-            <div id="timer">Time left: <span id="time-left">60</span> seconds</div>
-            <div id="score">Score: <span id="current-score">0</span></div>
-            <button id="next-btn">Next Question</button>
-            <div id="feedback"></div>
-            <div id="results" style="display: none;">
-                <h2>Quiz Complete!</h2>
-                <p id="final-score"></p>
-                <button id="restart-btn">Restart Quiz</button>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p>Created by <a href="https://github.com/Vikram2005-byte" target="_blank">Vikram2005-byte</a></p>
-    </footer>
-    <script src="script.js"></script>
+
+            <section id="results" class="results" aria-labelledby="results-title" hidden>
+                <p class="eyebrow">That's a wrap</p>
+                <h2 id="results-title">Quiz complete</h2>
+                <p id="final-score" class="final-score"></p>
+                <p class="results-note">Want another round? Restart to try the questions again.</p>
+                <button type="button" id="restart-btn" class="button button-primary">Try again</button>
+            </section>
+        </section>
+
+        <footer class="page-footer">
+            <p>A small browser quiz built with HTML, CSS, and vanilla JavaScript.</p>
+            <a href="https://github.com/Vikram2005-byte/Quiz">View the source on GitHub</a>
+        </footer>
+    </main>
 </body>
 </html>
