@@ -1,38 +1,43 @@
 # Quiz App
 
-A small multiple-choice quiz with a countdown for each question. The current version has four sample questions and shows your score at the end.
+A short multiple-choice quiz with a countdown for each question. There are four general-knowledge questions in the current question bank; after the last one, you'll see your final score.
+
+## Play online
+
+[**Open the quiz**](https://quiz-tawny-nine.vercel.app/)
 
 ## How it works
 
-- You get 60 seconds to answer each question.
-- The app tells you whether your answer was correct and shows the right answer when it wasn't.
-- Once you answer or the timer runs out, the options are locked.
-- Move through the questions, see your final score, and restart for another round.
+- Each question has 60 seconds.
+- The app lets you know whether your answer was correct and highlights the correct choice.
+- Once you answer or the timer runs out, the options are locked for that question.
+- A progress label shows which question you're on.
+- At the end, you get a score out of four and can restart the quiz.
 
 The included questions are examples, not a large question bank.
 
 ## Run it locally
 
-1. Download the repository using **Code → Download ZIP** and extract it, or clone it:
+Download the repository using **Code → Download ZIP** and extract it, or clone it:
 
-       git clone https://github.com/Vikram2005-byte/Quiz.git
+    git clone https://github.com/Vikram2005-byte/Quiz.git
 
-2. Open `index.html` in a modern browser.
+Open `index.html` in a modern browser.
 
-If you'd rather use a local server, run this command from the project folder:
+If you prefer a local server, run this command from the project folder:
 
-       python -m http.server 8000
+    python -m http.server 8000
 
-Then open [http://127.0.0.1:8000](http://127.0.0.1:8000). Leave the terminal running while the quiz is open.
+Then open [http://127.0.0.1:8000](http://127.0.0.1:8000). Keep the terminal running while the quiz is open.
 
 ## Change the questions
 
-Open `script.js` and edit the `questions` array near the top. Each question has its text, four options, and the index of the correct option (the first option is index `0`).
+Open `script.js` and edit the `questions` array near the top. Each entry contains the question text, four options, and the index of the correct option (the first option is index `0`).
 
 ## Project files
 
-- `index.html` — quiz screen and result view
-- `styles.css` — page styling
-- `script.js` — question data, timer, answer feedback, scoring, and restart logic
+- `index.html` — quiz screen, progress, timer, and result view
+- `styles.css` — layout, responsive styling, and answer feedback
+- `script.js` — question data, timer, scoring, feedback, and restart logic
 
-The quiz is entirely client-side. Scores are not submitted to a server or saved as an online account.
+The quiz runs entirely in the browser. Scores are not submitted to a server or stored in an online account.
